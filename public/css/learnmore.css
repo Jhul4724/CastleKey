@@ -169,7 +169,27 @@ a {
   }
 }
 
-.learn-more {
-  display: grid;
-  justify-items: center;
+.parag {
+  margin: 3em 0 3em 0;
+  border: 2px #191a1f solid;
+  border-radius: 25px;
+  padding: 0.5em 1.5em;
+  transition: background-color 500ms;
+  transition: border 500ms;
+  transition: font-size 500ms;
+}
+
+.parag:hover {
+  background: #292a30;
+  border: #23242a;
+  font-size: 1.05em;
+}
+
+li {
+  margin-top: 1em;
+}
+
+.learn-more h1 {
+  font-size: 4em;
+  text-align: center;
 }
