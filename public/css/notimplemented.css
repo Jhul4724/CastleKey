@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+    overflow: hidden;
+}
+
+.body {
+    display: grid;
+    justify-items: center;
+}
+
+.title {
+    margin-bottom: 175px;
+}
+
+.title h1 {
+    position: relative;
+    font-size: 10vw;
+    color: #23242a;
+    -webkit-text-stroke: 0.3vw #33343a;
+    text-transform: uppercase;
+}
+
+.title h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #45f3ff;
+    -webkit-text-stroke: 0.3vw #33343a;
+    border-right: 2px solid #45f3ff;
+    overflow: hidden;
+    animation: title 6s linear infinite;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 175px;
+    transform: rotate(-35deg);
+}
+
+.container .box {
+    position: relative;
+    left: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + 400px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    animation: surface 1.5s ease-in-out infinite;
+}
+
+.container .box .cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #03e9f4;
+    box-shadow: 0 0 5px rgba(3, 233, 244, 1),
+    0 0 25px rgba(3, 233, 244, 1),
+    0 0 50px rgba(3, 233, 244, 1),
+    0 0 100px rgba(3, 233, 244, 1),
+    0 0 200px rgba(3, 233, 244, 0.5),
+    0 0 300px rgba(3, 233, 244, 0.5);
+    transform-origin: bottom right;
+    animation: climb 1.5s ease-in-out infinite;
+}
+
+.error {
+    display: grid;
+    justify-items: center;
+    color: #cfcfcf;
+}
+
+#home-button {
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 120px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 300ms;
+    transition: background-color 300ms;
+}
+
+#home-button:hover {
+    color: #45f3ff;
+    background: #000;
+}
+
+@keyframes title {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+@keyframes surface {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes climb {
+    0% {
+        transform: rotate(0deg);
+    }
+    65% {
+        transform: rotate(85deg);
+    }
+    75% {
+        transform: rotate(87.5deg);
+    }
+    85% {
+        transform: rotate(88.75deg);
+    }
+    95% {
+        transform: rotate(89.375deg);
+    }
+    60%, 70%, 80%, 90%, 100% {
+        transform: rotate(90deg);
+    }
+}
