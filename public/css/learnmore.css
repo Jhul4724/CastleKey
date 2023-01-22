@@ -35,9 +35,9 @@ a {
 
 .s-layout__content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
+  padding-left: 60px;
+  padding-top: 70px;
 }
 
 /* Sidebar */
