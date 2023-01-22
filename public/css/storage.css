@@ -95,6 +95,7 @@ a {
   width: 100%;
   height: 4em;
   transition: background-color 300ms;
+  transition: color 300ms;
 }
 
 .s-sidebar__nav-link em {
@@ -106,6 +107,7 @@ a {
 
 .s-sidebar__nav-link:hover {
   background: whitesmoke;
+  color: #45f3ff;
 }
 
 .s-sidebar__nav-link > i {
