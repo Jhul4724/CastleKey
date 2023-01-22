@@ -2,18 +2,37 @@
 @import "compass/css3";
 
 
-*, :before, :after{ box-sizing: border-box; }
-// FONTS
-$sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+*, :before, :after {
+  box-sizing: border-box;
+}
 
-// COLORS
-$orange: #DF4500;
-$gray: #35302D;
-$gray-shine: #3C3735;
-$white-off: #DFDBD9;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
 
-.unstyled{ list-style: none; padding: 0; margin: 0;
+:root {
+  --orange: #DF4500;
+  --gray: #35302D;
+  --gray-shine: #3C3735;
+  --white-off: #DFDBD9;
+  --sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   a{ text-decoration: none; }
 }
 .list-inline{ overflow: hidden;
@@ -36,13 +55,13 @@ $white-off: #DFDBD9;
   a{
     display: block;
     padding: 1em 0;
-    color: $white-off;
+    color: var(--white-off);
     text-decoration: none;
     transition: .15s linear color;
     
     &:hover{
       color: #fff;
-      span{ color: $orange; }
+      span{ color: var(--orange); }
     }
   }
   
@@ -60,12 +79,12 @@ $white-off: #DFDBD9;
   }
   
   li{
-    border-bottom: solid 1px $gray-shine;
+    border-bottom: solid 1px var(--gray-shine);
   }
   
   a{
     padding: 1.1em 0;
-    color: $white-off;
+    color: var(--white-off);
     font: 400 1.125em $sans;
     text:{
       align: center;
@@ -80,11 +99,11 @@ $white-off: #DFDBD9;
 
 // SOCIAL LINKS
 .social-links{
-  border-bottom: solid 1px $gray-shine;
+  border-bottom: solid 1px var(--gray-shine);
   
   li{
     width: 25%;
-    border-left: solid 1px $gray-shine;
+    border-left: solid 1px var(--gray-shine);
     &:first-child{ border: none; }
   }
   
@@ -92,10 +111,10 @@ $white-off: #DFDBD9;
     display: block;
     height: 5.5em;
     text-align: center;
-    color: $gray-shine;
-    font: 0.75em/5.5em $sans;
+    color: var(--gray-shine);
+    font: 0.75em/5.5em var(--sans);
     &:hover{
-      color: $white-off;
+      color: var(--white-off);
     }
   }
 }
