@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css" >
-    <title>Welcome to Firebase Hosting</title>
-
+    <title>Castle Key</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.16.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -40,7 +41,11 @@
     </style>
   </head>
   <body>
+    <script type="module" src="firebase"></script>
+    <script type="module" src="firebase/firestore"></script>
     <script>
+      import firebase from "firebase";
+      import firestore from "firebase/firestore";
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
