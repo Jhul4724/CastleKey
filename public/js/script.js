@@ -1,5 +1,6 @@
 const loginButton = document.getElementById("login-button");
 var loginAttempts = 0;
+var valid = 2;
 
 loginButton.onclick = () => {
   // Query login credentials
@@ -8,9 +9,7 @@ loginButton.onclick = () => {
   console.log(`Username: ${username.value};`);
   console.log(`Password: ${password.value}.`);
 
-  var valid = 2;
   // Validate login credentials
-
   // Login to user account if credentials correct
   if (valid == 0) {
     window.location.href = "storage.html";
@@ -22,5 +21,6 @@ loginButton.onclick = () => {
   } else {
     loginAttempts++;
     alert("Error: invalid password");
+    valid = 0;
   }
 };
