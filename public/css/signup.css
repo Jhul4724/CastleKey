@@ -15,6 +15,46 @@ body {
     background: #23242a;
 }
 
+.body {
+    display: grid;
+    justify-items: center;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.title h1 {
+    position: relative;
+    font-size: 10vw;
+    color: #23242a;
+    -webkit-text-stroke: 0.3vw #33343a;
+    text-transform: uppercase;
+}
+
+.title h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #45f3ff;
+    -webkit-text-stroke: 0.3vw #33343a;
+    border-right: 2px solid #45f3ff;
+    overflow: hidden;
+    animation: title 6s linear infinite;
+}
+
+@keyframes title {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
 .box {
     position: relative;
     width: 380px;
@@ -129,10 +169,6 @@ body {
 .input-box input:valid ~ i,
 .input-box input:focus ~ i {
     height: 44px;
-}
-
-#email-input-box {
-    /*margin-top: 0px;*/
 }
 
 .links {

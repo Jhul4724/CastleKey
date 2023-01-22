@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Castlekey - Login</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css" >
+	<link rel="stylesheet" type="text/css" href="../css/style.css" >
 </head>
 
 <body>
@@ -30,25 +30,30 @@
 		const app = initializeApp(firebaseConfig);
 		const analytics = getAnalytics(app);
 	  </script>
-	  <div class="box">
-		  <div class="form">
-			  <h2>Sign in</h2>
-			  <div class="input-box">
-				  <input type="text" required="required" id="username">
-				  <span>Username</span>
-				  <i></i>
-			  </div>
-			  <div class="input-box">
-				  <input type="password" required="required" id="password">
-				  <span>Password</span>
-				  <i></i>
-			  </div>
-			  <div class="links">
-				  <a href="#">Forgot password?</a>
-				  <a href="./signup.html">Sign up</a>
-			  </div>
-			  <input type="submit" value="Login" id="login-button">
-		  </div>
+	  <div class="body">
+		<div class="title">
+				<h1 data-text="CastleKey">CastleKey</h1>
+		</div>
+		<div class="box">
+				  <div class="form">
+					  <h2>Sign in</h2>
+					  <div class="input-box">
+						  <input type="text" required="required" id="username">
+						  <span>Username</span>
+						  <i></i>
+					  </div>
+					  <div class="input-box">
+						  <input type="password" required="required" id="password">
+						  <span>Password</span>
+						  <i></i>
+					  </div>
+					  <div class="links">
+						  <a href="./pwdreset.html">Forgot password?</a>
+						  <a href="./signup.html">Sign up</a>
+					  </div>
+					  <input type="submit" value="Login" id="login-button">
+				  </div>
+		</div>
 	  </div>
     <script type="text/javascript" src="../js/script.js"></script>
 </body>

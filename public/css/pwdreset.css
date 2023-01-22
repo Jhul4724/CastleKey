@@ -62,7 +62,6 @@ body {
     background: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
-    margin: 0px !important;
 }
 
 .box::before {
@@ -74,7 +73,7 @@ body {
     height: 420px;
     transform-origin: bottom right;
     background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-    animation: contour 6s linear infinite;
+    animation: animate 6s linear infinite;
 }
 
 .box::after {
@@ -86,11 +85,11 @@ body {
     height: 420px;
     transform-origin: bottom right;
     background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-    animation: contour 6s linear infinite;
+    animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
 
-@keyframes contour {
+@keyframes animate {
     0% {
         transform: rotate(0deg);
     }
@@ -194,7 +193,7 @@ input[type="submit"] {
     outline: none;
     background: #45f3ff;
     padding: 11px 25px;
-    width: 100px;
+    width: 160px;
     margin-top: 10px;
     border-radius: 4px;
     font-weight: 600;
