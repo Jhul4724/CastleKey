@@ -1,7 +1,5 @@
 const loginButton = document.getElementById("login-button");
 var loginAttempts = 0;
-import "firebase/firestore";
-const db = firebase.firestore();
 
 loginButton.onclick = () =>
 {
@@ -10,16 +8,6 @@ loginButton.onclick = () =>
     const password = document.getElementById("password");
     console.log(`Username: ${username.value};`);
     console.log(`Password: ${password.value}.`);
-    db.collection("users").add({
-        first: username.value,
-        last: password.value,
-    })
-    .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch((error) => {
-        console.error("Error adding document: ", error);
-    });
 
     // Validate login credentials
     var valid = 2;
