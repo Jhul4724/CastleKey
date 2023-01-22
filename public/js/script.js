@@ -17,9 +17,11 @@ loginButton.onclick = () => {
     alert("Error: too many attemps");
   } else if (valid == 1) {
     loginAttempts++;
+    password.value = "";
     alert("Error: invalid username or email");
   } else {
     loginAttempts++;
+    password.value = "";
     alert("Error: invalid password");
     valid = 0;
   }
