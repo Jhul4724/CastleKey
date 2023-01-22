@@ -15,7 +15,7 @@ signupButton.onclick = () =>
     // Create account if information valid
     if (valid == 0)
     {
-        window.location.href = './storage.html';
+        window.location.href = './index.html';
     }
     else if (valid == 1)
     {
